@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
     <script src="app.js"></script>
-</body>
+  </head>
+  <body>
+    <h1>Nhập số nguyên d:</h1>
+    <input type="number" id="d-input" />
+    <button onclick="calculateResult()">Tính toán</button>
+    <script>
+      function calculateResult() {
+        //Nhập vào số nguyên d từ bản phím
+        var d = parseInt(document.getElementById("d-input").value);
+
+        //Tính tổng result của c và d (result = c + d)
+        var result = c + d;
+
+        //In ra kết quả đồng thời bằng 2 cách
+        alert("Tổng của " + c + " và " + d + " là: " + result);
+        console.log("Tổng của " + c + " và " + d + " là: " + result);
+      }
+    </script>
+  </body>
 </html>
