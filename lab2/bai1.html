@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // nhập a
+      var a = parseInt(prompt("Mời bạn nhập a:"));
+      // nhập b
+      var b = parseInt(prompt("Mời bạn nhập b:"));
+      // nhập c
+      var c = parseInt(prompt("Mời bạn nhập c:"));
+      // nếu a bằng 0
+      if (a == 0) {
+        // và b bằng 0
+        if (b == 0) {
+          // và c bằng 0
+          if (c == 0) {
+            // thì in ra "phương trình Vô số nghiệm"
+            document.write("phương trình vô số nghiệm");
+          }
+          // ngược lại nếu b khác 0
+          else {
+            // thì in ra "phương trình vô nghiệm"
+            document.write("phương trình vô nghiem");
+          }
+        }
+        //  ngược lại nếu b khác 0
+        else {
+          // thì in ra phương trình có nghiệm -c/d
+          document.write("phương trình có nghiệm x= " + -c / b);
+        }
+      }
+      // ngược lại nếu a khác 0
+      else {
+        // tính delta
+        var delta = Math.pow(b, 2) - 4 * a * c;
+        // nếu delta nhỏ hơn 0
+        if (delta < 0) {
+          // thì phương trình vô nghiệm
+          document.write("phương trình vô nghiem");
+        } else if (delta == 0) {
+          document.write("phương trình có nghiệm kép x1 =x2 =" + (-b / 2) * a);
+        } else {
+          document.write(
+            "phương trình có nghiệm x1=" + ((-b + Math.sqrt(delta)) / 2) * a
+          );
+          document.write(
+            " <br>" +
+              "phương trình có nghiệm x2=" +
+              ((-b - Math.sqrt(delta)) / 2) * a
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
