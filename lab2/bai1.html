@@ -43,9 +43,13 @@
         if (delta < 0) {
           // thì phương trình vô nghiệm
           document.write("phương trình vô nghiem");
+          //nếu delta bằng 0
         } else if (delta == 0) {
+          // phương trinh có nghiệm kép x1=x2
           document.write("phương trình có nghiệm kép x1 =x2 =" + (-b / 2) * a);
+          //ngược lại nếu delta lớn hơn 0
         } else {
+          //phương trinh có nghiệm x1,x2
           document.write(
             "phương trình có nghiệm x1=" + ((-b + Math.sqrt(delta)) / 2) * a
           );
