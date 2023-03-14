@@ -8,10 +8,15 @@
   </head>
   <body>
     <script>
+      // cho mảng
       let arr = ["Tue", "Thu", "Sat", "Nine"];
+      // Xóa phần tử "Nine" khỏi mảng
       arr.splice(3, 1, "Sun");
+      //   Ở vị trí đầu tiên xóa 0 phần tử sau đó thêm mon
       arr.splice(0, 0, "Mon");
+      //ở vị trí thứ 2 xóa 0 phần tử sau đó  thêm web vào mảng
       arr.splice(2, 0, "Web");
+      //ở vị trí thứ 4 xóa 0 phần tử sau đó  thêm fri vào mảng
       arr.splice(4, 0, "Fri");
 
       document.write(arr);
