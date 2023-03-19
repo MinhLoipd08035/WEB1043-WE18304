@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="bai1.js"></script>
+  </head>
+  <body>
+    <script>
+      let chon;
+      do {
+        chon = parseInt(
+          prompt(
+            "1. Tính điểm trung bình (switch case).\n2. Tính điểm trung bình (if else).\n0. Thoát"
+          )
+        );
+        switch (chon) {
+          case 1:
+            tinhDiemTrungBinhSwitch();
+            break;
+          case 2:
+            tinhDiemTrungBinhIfElse();
+            break;
+          case 0:
+            alert("Cảm ơn bạn đã sử dụng chương trình");
+            break;
+
+          default:
+            alert("Vui lòng chọn lại chức năng");
+            break;
+        }
+      } while (chon != 0);
+    </script>
+  </body>
+</html>
