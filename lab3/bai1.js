@@ -18,7 +18,7 @@ function tinhDiemTrungBinhIfElse() {
       sinh > 10 ||
       isNaN(sinh)
     ) {
-      alert("Nhap sai diem!");
+      alert("Nhap sai diem!\nVui lòng chọn lại chức năng");
       return;
     }
   
@@ -58,7 +58,7 @@ function tinhDiemTrungBinhIfElse() {
       sinh > 10 ||
       isNaN(sinh)
     ) {
-      alert("Nhap sai diem!");
+      alert("Nhap sai diem!\nVui lòng chọn lại chức năng");
       return;
     }
   
