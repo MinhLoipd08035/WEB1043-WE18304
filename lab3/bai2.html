@@ -1,47 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="bai2.css">
-    <script src="bai2.js"></script>
-</head>
-<body>
+    <style>
+      body {
+        width: 204px;
+        margin: auto;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+      }
+      input[type="text"] {
+        width: 100%;
+        height: 30px;
+        background-color: rgb(226, 246, 246);
+      }
+      input[type="button"] {
+        width: 60px;
+        height: 60px;
+        background-color: rgb(104, 197, 197);
+      }
+    </style>
+  </head>
+  <body>
+    <input id="dapan" type="text" value="0" />
     <div class="container">
-        <div class="title">Máy tính </div>
-        <div class="results">
-            <input type="text" id="resultInput" class="result">
-        </div>
-        <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">7</button>
-            <button class="button" onclick="buttonHandler(this)">8</button>
-            <button class="button" onclick="buttonHandler(this)">9</button>
-            <button class="button" onclick="buttonHandler(this)">+</button >
-        </div>
-        <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">4</button>
-            <button class="button" onclick="buttonHandler(this)">5</button>
-            <button class="button" onclick="buttonHandler(this)">6</button>
-            <button class="button" onclick="buttonHandler(this)">-</button>
-        </div>
-        <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">1</button >
-            <button class="button" onclick="buttonHandler(this)">2</button >
-            <button class="button" onclick="buttonHandler(this)">3</button >
-            <button class="button" onclick="buttonHandler(this)">*</button>
-        </div>
-        <div class="buttons">
-            <button class="button" onclick="buttonHandler(this)">0</button>
-            <button class="button" onclick="buttonHandler(this)">AC</button>
-            <button class="button" onclick="buttonHandler(this)">=</button >
-            <button class="button" onclick="buttonHandler(this)">/</button>
-        </div>
+      <input type="button" value="7" onclick="set_num(this.value)" />
+      <input type="button" value="8" onclick="set_num(this.value)" />
+      <input type="button" value="9" onclick="set_num(this.value)" />
+      <input type="button" value="+" onclick="set_num(this.value)" />
+      <input type="button" value="4" onclick="set_num(this.value)" />
+      <input type="button" value="5" onclick="set_num(this.value)" />
+      <input type="button" value="6" onclick="set_num(this.value)" />
+      <input type="button" value="-" onclick="set_num(this.value)" />
+      <input type="button" value="1" onclick="set_num(this.value)" />
+      <input type="button" value="2" onclick="set_num(this.value)" />
+      <input type="button" value="3" onclick="set_num(this.value)" />
+      <input type="button" value="*" onclick="set_num(this.value)" />
+      <input type="button" value="0" onclick="set_num(this.value)" />
+      <input
+        style="background-color: red"
+        type="button"
+        value="AC"
+        onclick="xoa()"
+      />
+      <input type="button" value="=" onclick="result()" />
+      <input type="button" value="/" onclick="set_num(this.value)" />
     </div>
-    </div>
-
-</body>
-
+    <script>
+      // Cho kết quả bằng chuỗi rỗng
+      var number = "";
+      // Get element của input có id = dapan và gắn và idResult
+      var idResult = document.getElementById("dapan");
+      function set_num(value) {
+        // Gắn number = value button
+        number += value;
+        // Gắn value của id dapan bằng biến number
+        idResult.value = number;
+      }
+      function xoa() {
+        // Gắn biến number bằng 0
+        number = "0";
+        // Gắn value của id dapan bằng number
+        idResult.value = number;
+      }
+      function result() {
+        // Nếu number bằng chuỗi rỗng hoặc bằng 0 thì thông báo "Vui lòng nhập phép tính"
+        if (number == "" || number == 0) {
+          alert("Vui lòng nhập phép tính");
+        }
+        // Gắn value của dapan bằng kết quả
+        idResult.value = eval(idResult.value);
+        // Gắn number bằng kết quả
+        number = idResult.value;
+      }
+    </script>
+  </body>
 </html>
