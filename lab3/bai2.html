@@ -43,8 +43,8 @@
       <input type="button" value="*" onclick="set_num(this.value)" />
       <input type="button" value="0" onclick="set_num(this.value)" />
       <input
-        style="background-color: red"
         type="button"
+        style="background-color: red"
         value="AC"
         onclick="xoa()"
       />
@@ -54,19 +54,19 @@
     <script>
       // Cho kết quả bằng chuỗi rỗng
       var number = "";
-      // Get element của input có id = dapan và gắn và idResult
-      var idResult = document.getElementById("dapan");
+      // Get element của input có id = dapan và gắn và dA
+      var dA = document.getElementById("dapan");
       function set_num(value) {
         // Gắn number = value button
         number += value;
         // Gắn value của id dapan bằng biến number
-        idResult.value = number;
+        dA.value = number;
       }
       function xoa() {
         // Gắn biến number bằng 0
         number = "0";
         // Gắn value của id dapan bằng number
-        idResult.value = number;
+        dA.value = number;
       }
       function result() {
         // Nếu number bằng chuỗi rỗng hoặc bằng 0 thì thông báo "Vui lòng nhập phép tính"
@@ -74,9 +74,9 @@
           alert("Vui lòng nhập phép tính");
         }
         // Gắn value của dapan bằng kết quả
-        idResult.value = eval(idResult.value);
+        dA.value = eval(dA.value);
         // Gắn number bằng kết quả
-        number = idResult.value;
+        number = dA.value;
       }
     </script>
   </body>
