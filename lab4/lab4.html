@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        constructor(id, firstName, lastName, classId, email, phoneNumber, dob) {
+          this.id = id;
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.classId = classId;
+          this.email = email;
+          this.phoneNumber = phoneNumber;
+          this.dob = new Date(dob);
+        }
+
+        getFullName() {
+          return this.lastName + " " + this.firstName;
+        }
+
+        getCurrentAge() {
+          const now = new Date();
+          const diff = now - this.dob;
+          const ageInYears = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+          const ageInDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+          return `${ageInYears} years old (${ageInDays} days old)`;
+        }
+      }
+
+      const students = [
+        new Student(
+          1,
+          "John",
+          "Doe",
+          1,
+          "johndoe@example.com",
+          "555-555-5555",
+          "1995-01-01"
+        ),
+        new Student(
+          2,
+          "Jane",
+          "Doe",
+          1,
+          "janedoe@example.com",
+          "555-555-5555",
+          "1998-05-10"
+        ),
+        new Student(
+          3,
+          "Bob",
+          "Smith",
+          1,
+          "bobsmith@example.com",
+          "555-555-5555",
+          "1997-12-25"
+        ),
+        new Student(
+          4,
+          "Alice",
+          "Jones",
+          1,
+          "alicejones@example.com",
+          "555-555-5555",
+          "1996-08-15"
+        ),
+        new Student(
+          5,
+          "Tom",
+          "Williams",
+          1,
+          "tomwilliams@example.com",
+          "555-555-5555",
+          "1999-03-22"
+        ),
+      ];
+
+      students.sort((a, b) => a.dob - b.dob);
+
+      students.forEach((student) => {
+        console.log(`Name: ${student.getFullName()}`);
+        console.log(`Age: ${student.getCurrentAge()}`);
+      });
+
+      const screenWidth = window.screen.width;
+      const screenHeight = window.screen.height;
+
+      console.log(`Screen width: ${screenWidth}px`);
+      console.log(`Screen height: ${screenHeight}px`);
+    </script>
+  </body>
+</html>
