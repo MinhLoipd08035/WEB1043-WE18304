@@ -74,19 +74,23 @@
     font-size: 4rem;
   }
   
-  /* Section Images
-  section#home {
-    background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;;
-  }
-  
-  section#about {
-    background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;;
-  }
-  
-  section#service {
-    background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;;
-  }
-  
-  section#contact {
-    background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
-  } */
+ /* Section Images */
+section#home {
+  background-color: #fff;
+  /* background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;; */
+}
+
+section#about {
+  background-color: aqua;
+  /* background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;; */
+}
+
+section#service {
+  background-color: bisque;
+  /* background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;; */
+}
+
+section#contact {
+  background-color: aquamarine;
+  /* background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;; */
+}
